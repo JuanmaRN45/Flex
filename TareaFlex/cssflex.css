@@ -26,47 +26,8 @@ h1{
     font-size: 50px;
 }
 
-table{
-    text-align: center;
-    border: 1px solid #000000;
-    border-collapse: collapse;
-    margin: auto;
-    min-width: 300px;
-}
-
-td, th{
-    border: 1px solid #000000;
-    height: 30px;
-    border-collapse: collapse;
-    padding: 10px;
-}
-
-td a{
-    cursor: pointer;
-    margin: 0 10px;
-}
-td a:hover{
-    color:#000000;
-}
-
 a{
     text-decoration:none;
-}
-
-button{
-    margin-top:10px;
-    width: 100px;
-    height: 50px;
-    background-color: #000000;
-    color:#0ac215;
-    cursor: cell;
-    border:0;
-    border-radius: 10px;
-}
-
-button:hover{
-    background-color: #404040;
-    color:#0ac215;
 }
 
 header {
@@ -180,7 +141,6 @@ nav #btnMenu {
         top: 100px;
         left: -1000px;
         text-align: center;
-        transition: all 1s;
         display:block !important;
     }
 
@@ -201,7 +161,7 @@ nav #btnMenu {
     }
 
     nav input#check:checked~ul {
-        left: 0;
+        left: 80%;
         display: block;
     }
 	
@@ -209,23 +169,18 @@ nav #btnMenu {
         font-size: 1em;
     }
 
-    label, td, th{
+    label{
         font-size: 1em;
     }
 
     h1{
         font-size: 25px;
     }
-    td a{
-        
-        font-size: 1.5em;
-    }
 
     #divWonderLeague{
         margin: 50px 0 !important;
+        flex-wrap: wrap-reverse !important;
     }
-
-    /*-----FORMULARIO-----*/
 
     .contenedor{
         border:1px solid black;
@@ -244,21 +199,10 @@ nav #btnMenu {
         width: 80px;
         height: 80px;
     }
-
-    .btnEditar{
-        margin-bottom: 10px;
-    }
-
-    .titulos{
-        font-size: 25px;
-        display: block;
-    }
-    
 }
 
 @media (max-width: 1250.4px) {
 
-    /*-----FORMULARIO-----*/
 
     .contenedor{
         border:1px solid black;
@@ -276,26 +220,11 @@ nav #btnMenu {
     .imgEscudo{
         width: 80px;
         height: 80px;
-    }
-
-    .btnEditar{
-        margin-bottom: 10px;
-    }
-
-    .titulos{
-        font-size: 25px;
-        display: block;
     }
 }
 
 /*---------Media Query Movil---------*/
 @media (max-width:540px){
-    td,th{
-        padding:5px;
-    }
-    tr a{
-        margin:0 5px;
-    }
     nav li{
         height: 70px;
     }
@@ -310,16 +239,16 @@ nav #btnMenu {
 }
 
 @media (min-width:1250.4px){
-    /*-----FORMULARIO-----*/
 
     .contenedor{
         border:1px solid black;
         border-radius: 10px;
         position: relative;
-        height: 500px;
+        height: 200px;
         margin: 30px;
         display: flex;
-        vertical-align: middle;
+        width: 400px;
+        display: inline-block;
     }
 
     .divsFormularios{
@@ -331,48 +260,13 @@ nav #btnMenu {
     }
 
     div.divsFormularios.partidos{
-        top:15%;
-        left:30%;
-    }
-
-    div.divsFormularios.puntos{
-        top:15%;
-        left:60%;
-    }
-
-    .descripcion{
-        font-size: 25px;
-        margin-right: 10px;
-    }
-
-    div.divsFormularios.btnEditar{
-        top:80%;
-        left:10%;
-    }
-
-    div.divsFormularios.golesaf{
-        top:35%;
-        left:30%;
-    }
-
-    div.divsFormularios.golesec{
-        top:65%;
-        left:5%;
-    }
-
-    div.divsFormularios.goalaverage{
-        top:78%;
-        left:54%;
-    }
-
-    .titulos{
-        font-size: 25px;
-        display: block;
+        top:25%;
+        left:50%;
     }
 
     .imgEscudo{
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
         position: absolute;
         left: 5%;
         top: 15%;
@@ -381,13 +275,11 @@ nav #btnMenu {
 }
 
 #divWonderLeague {
-    vertical-align: middle;
     min-width: 300px;
     min-height: 80px;
-}
-
-#divWonderLeague table {
-    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 p{
