@@ -30,10 +30,9 @@ a{
     text-decoration:none;
 }
 
+
 header {
     background-color: #000000;
-    justify-content: space-between;
-    align-items: center;
     height: 100px;
     font-size: 20px;
 }
@@ -48,25 +47,20 @@ nav input#check {
 
 header ul {
     list-style: none;
-    display: flex;
+    display: flex;/*Display:flex para que los li del ul se coloquen y más tarde se puedan añadir (mas abajo hay shrink y grow) más o menos y mantengan la estructura*/
     margin: 0;
     padding: 0;
 }
 
 #flex0{
-    flex-grow: 0;
+    flex-grow: 0;/*Flex grow y shrink en el logo para que se mantenga siempre igual da igual lo que añadamos*/
     flex-shrink: 0;
     margin-left: 20px;
 }
 
-#flex1{
-    flex-grow: 1;
-    flex-shrink: 1;
-}
-
 nav li{
-	display: inline-block;
-    flex-grow: 2;
+	display: inline-block;/*Inline-block para que mantengan las propiedades pero se coloquen en linea uno al lado de otro*/
+    flex-grow: 2;/*Con el grow y shrink consigo que los li se ajusten en tamaño al añadir más o quitar alguno*/
     flex-shrink: 2;
     margin: auto;
     height: 100px;
@@ -89,7 +83,7 @@ header ul a {
 }
 
 nav #btnMenu {
-    float: right;
+    float: right;/*Coloco el botón del menú desplegable a la derecha*/
     margin-top: 35px;
     margin-right: 30px;
     display: none;
@@ -113,6 +107,9 @@ nav #btnMenu {
     }
 }
 
+/*Con esta media query hago que desaparezca el menu habitual y aparezca el menú desplegable.
+  También para variar y usar más flex el contenido tiene un flex-wrap:wrap-reverse para que las cajas sobrantes se coloquen en la fila de 
+  arriba en vez de en la de abajo*/
 @media (max-width: 730px) {
 
     nav #btnMenu {
@@ -160,7 +157,8 @@ nav #btnMenu {
         background: #000000;
     }
 
-    nav input#check:checked~ul {
+    /*Con el :checked hago que aparezca al pulsar el menu desplegable haciendo que se onga en display:block y left:80% para que se coloque*/
+    nav input#check:checked~ul {   
         left: 80%;
         display: block;
     }
@@ -176,7 +174,8 @@ nav #btnMenu {
     h1{
         font-size: 25px;
     }
-
+    /*Uso flex-wrap:wrap-reverse para que el contenido se coloque de manera que las cajas sobrantes se coloquen en la fila de arriba
+      y el !important para que se anteponga al flex-wrap:wrap que tiene el contenido*/
     #divWonderLeague{
         margin: 50px 0 !important;
         flex-wrap: wrap-reverse !important;
@@ -246,7 +245,6 @@ nav #btnMenu {
         position: relative;
         height: 200px;
         margin: 30px;
-        display: flex;
         width: 400px;
         display: inline-block;
     }
@@ -273,7 +271,8 @@ nav #btnMenu {
     }
 
 }
-
+/*Uso el displey flex junto con el space-around y el wrap para que las cajas se ajusten en espacio al ancho y las cajas sobrantes de cada fila
+se pongan en la fila de abajo*/
 #divWonderLeague {
     min-width: 300px;
     min-height: 80px;
